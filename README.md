@@ -8,6 +8,7 @@
 
 ## 1. Prerequisites
 * Python 3.7 installed
+* Virtualenv installed (`sudo apt install python3-virtualenv` on Ubuntu)
 * If the installation (pip install) is executed behind a (corporate) proxy, the following environments variables must be set: http_proxy and https_proxy (including authentication e.g., http://${proxy_username):$(proxy_password)@yourproxy.yourdomain)
 * If you do not run with administration rights, you may need to configure pip target path to write to your user home directory.
 
@@ -31,6 +32,8 @@ target=C:\SomeDir\Where\Your\Account\Can\Write\To
 
 ## 2. Project Setup
 * Checkout vss-tools as submodule of the Vehicle Signal Specification repository (git clone --recurse-submodules -j8 https://github.com/GENIVI/vehicle_signal_specification.git)
+* RUN  ```virtualenv venv```
+* RUN  ```source venv/bin/activate``` (you should see a '(venv)' prefix to your prompt)
 * RUN  ```pip install -e .``` from the vss-tools project root directory
 * Run  ```pip install -r requirements.txt```  from the vss-tools project root directory
 
